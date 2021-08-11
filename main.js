@@ -8,10 +8,11 @@ var app = new Vue ({
         randomNumbers() {
             for (i = 0; i <=7; i++){
                 let randomNum = (Math.floor(Math.random() * 6)) + 1;
+                console.log(randomNum);
                 if(this.throws[randomNum] === undefined) {
-                    this.throws[randomNum] = 1;
+                    this.$set(this.throws, randomNum, 1);
                 } else {
-                    this.throws[randomNum]++;
+                    this.$set(this.throws, randomNum, ++this.throws[randomNum]);
                 }
             }
 
