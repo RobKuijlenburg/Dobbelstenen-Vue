@@ -18,6 +18,10 @@ var app = new Vue ({
 
             console.log(this.throws);
 
+        },
+
+        resetThrows() {
+            this.throws = {};
         }
     }
 })
